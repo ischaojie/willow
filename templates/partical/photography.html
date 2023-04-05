@@ -1,0 +1,32 @@
+{% import 'partical/photo.html' as photo %}
+
+{% macro main() %}
+{{ page.content | safe }}
+{% if config.extra.willow.photography.photos %}
+<div class="grid gap-4">
+  {% for photo in config.extra.willow.photography.photos %}
+  <div class="g-col-12">
+    <div class="card shadow bg-body-tertiary">
+      {{ photo::main(name=photo) }}
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <span>《{{ photo | split(pat="/") | last | split(pat=".") | first }}》</span>
+          <div class="ms-auto">
+            <a href="#" class="ms-3 text-muted">
+              <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+              </svg>
+              0
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,88 @@
+base_url = "https://willow.chaojie.fun"
+title = "Willow"
+description = "A zola theme named willow"
+default_language = "zh-CN"
+compile_sass = true
+build_search_index = false
+generate_feed = true
+
+taxonomies = [{ name = "tags", feed = true }]
+
+[markdown]
+highlight_code = true
+render_emoji = true
+
+
+[languages.en.translations]
+language_name = "English"
+home = "Home"
+articles = "Articles"
+tags = "Tags"
+photography = "Photography"
+about = "About"
+memos = "Status"
+date_format = "%Y-%m-%d"
+next_page = "Next Page"
+last_page = "Last Page"
+
+[languages.zh-CN.translations]
+language_name = "中文"
+home = "首页"
+articles = "文章"
+tags = "标签"
+photography = "摄影"
+about = "关于"
+memos = "碎碎念"
+date_format = "%Y-%m-%d"
+next_page = "下一页"
+last_page = "上一页"
+
+
+[extra]
+
+
+# --- willow config example --- #
+
+[extra.willow]
+# The number of articles to show on the home page
+show_article_num = 10
+
+# The order of the navigation bar, home is the first by default
+# current supported nav: articles, tags, about, photography, memos
+nav = ["articles", "memos", "photography", "tags", "about"]
+
+
+# --- social accounts --- #
+# currently supported: twitter, douban, github
+
+[extra.willow.social]
+twitter = "chaojie_cn"
+douban = "218724191"
+github = "ischaojie"
+
+# --- photography --- #
+
+[extra.willow.photography]
+# Put the photos you want to show on the photography page here
+photos = [
+    "https://file.chaojie.fun/photography/过春天.jpg",
+    "https://file.chaojie.fun/photography/lan.jpg",
+]
+
+# --- giscus --- #
+# see https://giscus.app/ for more details
+
+[extra.willow.comment.giscus]
+repo = "ischaojie/blog"
+repo_id = "MDEwOlJlcG9zaXRvcnkyODk4MDA1NTY="
+category = "Announcements"
+category_id = "DIC_kwDOEUYBbM4CPWbs"
+mapping = "title"
+
+# --- memos --- #
+
+[extra.willow.memos]
+show_num = 10
+
+# The memo api
+api = "https://momo.chaojie.fun/api/memo/all"

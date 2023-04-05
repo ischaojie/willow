@@ -1,0 +1,7 @@
+{% macro main(name) %}
+<a data-fslightbox="gallery" href="{{ name }}">
+  <!-- Photo -->
+  <div class="img-responsive img-responsive-16x9 card-img-top"
+    style="background-image: url({{ name }})"></div>
+</a>
+{% endmacro main %}

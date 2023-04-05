@@ -1,0 +1,15 @@
+{% macro main(name, identi) %}
+{% if name == 'github' %}
+<a href="https://github.com/{{ identi }}" target="_blank">
+    <img src="{{ get_url(path='images/social/' ~ name ~'.svg') }}" alt="{{ name }}" width="18" height="18">
+</a>
+{% elif name == 'twitter' %}
+<a href="https://twitter.com/{{ identi }}" target="_blank">
+    <img src="{{ get_url(path='images/social/' ~ name ~'.svg') }}" alt="{{ name }}" width="18" height="18">
+</a>
+{% elif name == 'douban' %}
+<a href="https://douban.com/people/{{ identi }}" target="_blank">
+    <img src="{{ get_url(path='images/social/' ~ name ~'.svg') }}" alt="{{ name }}" width="18" height="18">
+</a>
+{% endif %}
+{% endmacro main %}

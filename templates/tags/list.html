@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} | 标签列表
+{% endblock title %}
+
+{% block content %}
+<div class="card card-lg">
+    <div class="card-body markdown">
+        <div class="d-flex flex-wrap gap-4">
+            {% for tag in terms %}
+            <div>
+                <a class="" href="{{ get_taxonomy_url(kind='tags', name=tag.name) | safe }}">#{{tag.name}}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

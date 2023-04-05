@@ -1,0 +1,46 @@
+{% macro main() %}
+<ul class="list-inline list-inline-dots mb-0">
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/_index.md') }}">
+            {{ trans(key="home", lang=lang) }}
+        </a>
+    </li>
+    {% for nav in config.extra.willow.nav %}
+    {% if nav == 'tags' %}
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/_index.md') }}tags/">
+            {{ trans(key="tags", lang=lang) }}
+        </a>
+    </li>
+    {% endif %}
+    {% if nav == 'articles' %}
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/articles/_index.md') }}">
+            {{ trans(key="articles", lang=lang) }}
+        </a>
+    </li>
+    {% endif %}
+    {% if nav == 'photography' %}
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/photography/index.md') }}">
+            {{ trans(key="photography", lang=lang) }}
+        </a>
+    </li>
+    {% endif %}
+    {% if nav == 'about' %}
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/about/index.md') }}">
+            {{ trans(key="about", lang=lang) }}
+        </a>
+    </li>
+    {% endif %}
+    {% if nav == 'memos' %}
+    <li class="list-inline-item">
+        <a class="link-secondary" href="{{ get_url(path='@/memos/index.md') }}">
+            {{ trans(key="memos", lang=lang) }}
+        </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endmacro main %}

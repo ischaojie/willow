@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% import 'partical/photography.html' as photography %}
+{% import 'partical/memos.html' as memos %}
+
+{% block title %}
+{{ super() }} | {{ page.title }}
+{% endblock title %}
+
+{% block ogtitle %}{{ super() }} | {{ page.title }}{% endblock ogtitle %}
+{% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl %}
+
+{% block content %}
+{% if page.path == '/memos/' %}
+<div class="memos-scroll">
+</div>
+<p class="text-center" style="margin: 12px 0;">看完了，没有啦 😝</p>
+{% elif page.path == '/photography/' %}
+{{ photography::main() }}
+{% else %}
+<div class="card card-lg">
+    <div class="card-body markdown">
+        <div class="">
+            {% set page_path = page.path | split(pat="/") %}
+            {% if 'articles' in page_path %}
+            <div class="d-flex justify-content-between" style="margin-bottom: 18px;">
+                <div>{{ page.date | date(format="%Y-%m-%d") }}</div>
+                {% if page.taxonomies.tags %}
+                <i class="fas fa-tags"></i>
+                <ul class="list-inline list-inline-dots mb-0">
+                    {% for tag in page.taxonomies.tags %}
+                    <li class="list-inline-item">
+                        <a class="tag"
+                            href="{{ get_taxonomy_url(kind='tags', name=tag, lang=page.lang) | safe }}">#{{tag}}</a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <h1>{{ page.title | safe }}</h1>
+            <p>{{ page.content | safe }}</p>
+
+            {% if 'articles' in page_path %}
+            {% if config.extra.willow.comment.giscus %}
+            <script src="https://giscus.app/client.js" data-repo="{{ config.extra.willow.comment.giscus.repo | safe }}"
+                data-repo-id="{{ config.extra.willow.comment.giscus.repo_id | safe }}"
+                data-category="{{ config.extra.willow.comment.giscus }}"
+                data-category-id="{{ config.extra.willow.comment.giscus | safe }}"
+                data-mapping="{{ config.extra.willow.comment.giscus }}" data-strict="0" data-reactions-enabled="1"
+                data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme"
+                data-lang="{{ lang }}" data-loading="lazy" crossorigin="anonymous" async>
+                </script>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}
+
+
+{% block scripts %}
+{% if page.path == '/memos/' %}
+{{ memos::load() }}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% macro load() %}
+{% if config.extra.willow.memos %}
+<script>
+    let container = document.querySelector('.memos-scroll');
+    let infScroll = new InfiniteScroll(container, {
+        path: function () {
+            return `{{ config.extra.willow.memos.api ~ '?&limit=10&offset=' }}${this.pageIndex * 10}`;
+        },
+        // load response as JSON
+        responseBody: 'json',
+        status: '.scroll-status',
+        history: false,
+    });
+    let proxyElem = document.createElement('div');
+    infScroll.on('load', function (body) {
+        // compile body data into HTML
+        var itemsHTML = body['data'].map(getItemHTML).join('');
+        // convert HTML string into elements
+        proxyElem.innerHTML = itemsHTML;
+        // append item elements
+        container.append(...proxyElem.children);
+    });
+
+    // load initial page
+    infScroll.loadNextPage();
+
+    function getItemHTML({ content, creatorName, updatedTs }) {
+        return `
+<div class="scroll-element row row-cards justify-content-center" style="margin: 1px 0;">
+        <div class="col-lg-12">
+            <div class="card card-link">
+                <div class=""></div>
+                <div class="card-body">
+                    <p class="text-muted">
+                        @${creatorName} | ${ts2date(updatedTs)}
+                    </p>
+                    <p>${content}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+    }
+</script>
+{% endif %}
+{% endmacro %}

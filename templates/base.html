@@ -1,0 +1,45 @@
+{% import 'partical/header.html' as header %}
+{% import 'partical/footer.html' as footer %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{{ config.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{% block ogtitle %} {{ config.title }} {% endblock ogtitle %}">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{% block ogurl %}{% endblock ogurl %}">
+
+    {% block rss %}
+    <link rel="alternate" type="application/atom+xml" title="RSS"
+        href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    {% endblock %}
+    <link rel="icon" href="{{ get_url(path='images/favicon.ico') }}" sizes="any">
+    <link rel="stylesheet" href="{{ get_url(path='libs/tabler.min.css') }}">
+</head>
+
+<body>
+    <div class="theme-light" id="theme">
+        <div class="container-xl subpixel-antialiased">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
+                    {{ header::main() }}
+                    {% block content %}
+                    {% endblock %}
+                    {{ footer::main() }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ get_url(path='libs/tabler.min.js') }}"></script>
+    <script src="{{ get_url(path='libs/fslightbox.js') }}"></script>
+    <script src="{{ get_url(path='libs/infinite-scroll.min.js') }}"></script>
+    <script src="{{ get_url(path='libs/luxon.min.js') }}"></script>
+    <script src="{{ get_url(path='js/willow.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

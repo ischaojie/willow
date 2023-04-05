@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ super() }} | {{ section.title }}
+{% endblock title %}
+
+{% block content %}
+{% set posts = get_section(path='articles/_index.md') %}
+<div class="card card-lg">
+    <div class="card-body markdown">
+        <div class="">
+            {% for page in posts.pages %}
+            <div class="d-flex">
+                <div class="col-2 font-monospace">
+                    {{ page.date | date(format="%Y-%m-%d") }}
+                </div>
+                <div class="col text-start">
+                    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

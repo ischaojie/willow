@@ -1,0 +1,54 @@
+name = "willow"
+description = "A zola theme named willow"
+license = "MIT"
+homepage = "https://github.com/ischaojie/willow"
+min_version = "0.14.0"
+demo = "https://willow.chaojie.fun"
+
+[extra]
+
+# --- config for willow --- #
+
+[extra.willow]
+# The number of articles to show on the home page
+show_article_num = 10
+
+# The order of the navigation bar, home is the first by default
+# current supported nav: articles, tags, about, photography, memos
+nav = ["articles", "tags", "about"]
+
+
+# --- social accounts --- #
+# currently supported: twitter, douban, github
+
+# [extra.willow.social]
+# twitter = "chaojie_cn"
+# douban = "218724191"
+# github = "ischaojie"
+
+# --- photography --- #
+
+# [extra.willow.photography]
+# Put the photos you want to show on the photography page here
+# photos = [
+#     "https://file.chaojie.fun/photography/过春天.jpg",
+#     "https://file.chaojie.fun/photography/lan.jpg",
+# ]
+
+# --- giscus --- #
+# see https://giscus.app/ for more details
+
+# [extra.willow.comment.giscus]
+# repo = "ischaojie/blog"
+# repo_id = "MDEwOlJlcG9zaXRvcnkyODk4MDA1NTY="
+# category = "Announcements"
+# category_id = "DIC_kwDOEUYBbM4CPWbs"
+# mapping = "title"
+
+# --- memos --- #
+
+# [extra.willow.memos]
+# show_num = 10
+
+# The memo api
+api = "https://momo.chaojie.fun/api/memo/all"
