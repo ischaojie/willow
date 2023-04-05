@@ -51,4 +51,4 @@ nav = ["articles", "tags", "about"]
 # show_num = 10
 
 # The memo api
-api = "https://momo.chaojie.fun/api/memo/all"
+# api = "https://momo.chaojie.fun/api/memo/all"

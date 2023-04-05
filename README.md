@@ -1,6 +1,8 @@
 # willow
 
-![willow](static/images/logo.png)
+<div align="center">
+ <img src="static/images/logo.png" alt="logo" width="100">
+</div>
 
 你好哇，Willow 是为静态站点生成工具 [zola](https://www.getzola.org/) 制作的一款主题。没有 [Tabler](https://github.com/tabler/tabler) 这么漂亮的开源 UI 套件，以我丑陋的审美也没法做出好看的主题。感谢 Tabler 以及其他第三方库，感谢开源！
 
@@ -42,8 +44,20 @@ zola 支持在 `extra` 字段增加自定义的配置项，`willow` 的所有配
     ```
 - 导航栏的顺序
     目前支持的导航栏有：`articles`、`tags`、`about`、`photography`、`memos`。且 `home` 默认为首位。
-    !!! notice
 
+    > **Notice**
+    >
+    > 注意增加对应导航的翻译：
+    ```toml
+    [languages.zh-CN.translations]
+    language_name = "中文"
+    home = "首页"
+    articles = "文章"
+    tags = "标签"
+    photography = "摄影"
+    about = "关于"
+    memos = "碎碎念"
+    ```
 
     ```toml
     [extra.willow]
@@ -92,6 +106,18 @@ api = "https://momo.chaojie.fun/api/memo"
 
 ```
 
+### Photography
+
+willow 支持摄影作品页面，将需要展示的照片链接放在 photos 字段即可。配置参考：
+
+```toml
+[extra.willow.photography]
+photos = [
+    "https://file.chaojie.fun/photography/过春天.jpg",
+    "https://file.chaojie.fun/photography/lan.jpg",
+]
+```
+
 ### 完整配置参考
 
 ```toml
@@ -127,10 +153,10 @@ photos = [
 # see https://giscus.app/ for more details
 
 [extra.willow.comment.giscus]
-repo = "ischaojie/blog"
-repo_id = "MDEwOlJlcG9zaXRvcnkyODk4MDA1NTY="
+repo = "ischaojie/willow"
+repo_id = "R_kgDOJSaQFQ"
 category = "Announcements"
-category_id = "DIC_kwDOEUYBbM4CPWbs"
+category_id = "DIC_kwDOJSaQFc4CVjI_"
 mapping = "title"
 
 # --- memos --- #
@@ -141,3 +167,7 @@ show_num = 10
 # The memo api
 api = "https://momo.chaojie.fun/api/memo/all"
 ```
+
+## License
+
+MIT

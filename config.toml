@@ -73,10 +73,10 @@ photos = [
 # see https://giscus.app/ for more details
 
 [extra.willow.comment.giscus]
-repo = "ischaojie/blog"
-repo_id = "MDEwOlJlcG9zaXRvcnkyODk4MDA1NTY="
+repo = "ischaojie/willow"
+repo_id = "R_kgDOJSaQFQ"
 category = "Announcements"
-category_id = "DIC_kwDOEUYBbM4CPWbs"
+category_id = "DIC_kwDOJSaQFc4CVjI_"
 mapping = "title"
 
 # --- memos --- #
