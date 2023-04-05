@@ -104,7 +104,7 @@ mapping = "<>"
 # 每次加载展示的 memo 数量
 show_num = 10
 # API 接口
-api = "https://momo.chaojie.fun/api/memo"
+api = "https://momo.chaojie.fun/api/memo/all"
 
 ```
 
