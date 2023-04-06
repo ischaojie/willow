@@ -3,7 +3,7 @@
 <div align="center">
  <img src="static/images/logo.png" alt="logo" width="100">
 
-[示例网站](https://willow.chaojie.fun)
+[示例网站](https://willow.chaojie.fun) | [English](README-en.md)
 </div>
 
 你好哇，Willow 是为静态站点生成工具 [zola](https://www.getzola.org/) 制作的一款主题。没有 [Tabler](https://github.com/tabler/tabler) 这么漂亮的开源 UI 套件，以我丑陋的审美也没法做出好看的主题。感谢 Tabler 以及其他第三方库，感谢开源！
@@ -25,7 +25,7 @@ willow 的一些主要功能：
 
 ```bash
 cd themes
-git clone https://github.com/ischaojie/willow.git
+git submodule add https://github.com/ischaojie/willow.git themes/willow
 ```
 
 之后在 `config.toml` 文件中指定 theme 为 willow：
