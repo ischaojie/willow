@@ -4,7 +4,7 @@
     let container = document.querySelector('.memos-scroll');
     let infScroll = new InfiniteScroll(container, {
         path: function () {
-            return `{{ config.extra.willow.memos.api ~ '?&limit=10&offset=' }}${this.pageIndex * 10}`;
+            return `{{ config.extra.willow.memos.api ~ '?&limit=10&offset=' }}${(this.pageIndex-1) * 10}`;
         },
         // load response as JSON
         responseBody: 'json',
