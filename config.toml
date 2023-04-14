@@ -51,6 +51,9 @@ show_article_num = 10
 # current supported nav: articles, tags, about, photography, memos
 nav = ["articles", "memos", "photography", "tags", "about"]
 
+# Google analytics ID
+google_analytics = "G-XDREGKCZH0"
+
 
 # --- social accounts --- #
 # currently supported: twitter, douban, github
@@ -66,7 +69,6 @@ github = "ischaojie"
 # Put the photos you want to show on the photography page here
 photos = [
     "https://file.chaojie.fun/photography/过春天.jpg",
-    "https://file.chaojie.fun/photography/lan.jpg",
 ]
 
 # --- giscus --- #

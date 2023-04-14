@@ -17,6 +17,9 @@ show_article_num = 10
 # current supported nav: articles, tags, about, photography, memos
 nav = ["articles", "tags", "about"]
 
+# google analytics ID
+# google_analytics = "G-"
+
 
 # --- social accounts --- #
 # currently supported: twitter, douban, github
