@@ -20,6 +20,18 @@
     <link rel="icon" href="{{ get_url(path='images/favicon.ico') }}" sizes="any">
     <link rel="stylesheet" href="{{ get_url(path='libs/tabler.min.css') }}">
     <link rel="stylesheet" href="{{ get_url(path='assets/willow.css') }}">
+
+    {% if config.extra.willow.google_analytics %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.willow.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{{ config.extra.willow.google_analytics }}');
+    </script>
+    {% endif %}
 </head>
 
 <body>
