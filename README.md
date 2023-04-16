@@ -4,6 +4,7 @@
  <img src="static/images/logo.png" alt="logo" width="100">
 
 [示例网站](https://willow.chaojie.fun) | [English](README-en.md)
+
 </div>
 
 你好哇，Willow 是为静态站点生成工具 [zola](https://www.getzola.org/) 制作的一款主题。没有 [Tabler](https://github.com/tabler/tabler) 这么漂亮的开源 UI 套件，以我丑陋的审美也没法做出好看的主题。感谢 Tabler 以及其他第三方库，感谢开源！
@@ -40,34 +41,43 @@ zola 支持在 `extra` 字段增加自定义的配置项，`willow` 的所有配
 
 - 首页展示的文章数量
 
-    ```toml
-    [extra.willow]
-    show_article_num = 10
-    ```
-- 导航栏的顺序
-    目前支持的导航栏有：`articles`、`tags`、`about`、`photography`、`memos`。且 `home` 默认为首位。
+  ```toml
+  [extra.willow]
+  show_article_num = 10
+  ```
 
-    > **Notice**
-    >
-    > 注意增加对应导航的翻译：
-    ```toml
-    [languages.zh-CN.translations]
-    language_name = "中文"
-    home = "首页"
-    articles = "文章"
-    tags = "标签"
-    photography = "摄影"
-    about = "关于"
-    memos = "碎碎念"
-    ```
+- 导航栏的顺序
+  目前支持的导航栏有：`articles`、`tags`、`about`、`photography`、`memos`。且 `home` 默认为首位。
+
+  > **Notice**
+  >
+  > 注意增加对应导航的翻译：
+
+  ```toml
+  [languages.zh-CN.translations]
+  language_name = "中文"
+  home = "首页"
+  articles = "文章"
+  tags = "标签"
+  photography = "摄影"
+  about = "关于"
+  memos = "碎碎念"
+  ```
 
     ```toml
     [extra.willow]
     nav = ["articles", "tags", "about"]
     ```
 
+- Google Analytics
+
+    ```toml
+    [extra.willow]
+    google_analytics = "G-XXX"
+    ```
 
 ### 社交账号
+
 Willow 目前支持的社交账号有：`twitter`、`douban`、`github`（如有其他需求，欢迎 issue）。配置参考：
 
 ```toml
