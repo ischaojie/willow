@@ -31,12 +31,17 @@ nav = ["articles", "tags", "about"]
 
 # --- photography --- #
 
-# [extra.willow.photography]
+[extra.willow.photography]
+# custom/unsplash
+# type = "unsplash"
 # Put the photos you want to show on the photography page here
 # photos = [
 #     "https://file.chaojie.fun/photography/过春天.jpg",
 #     "https://file.chaojie.fun/photography/lan.jpg",
 # ]
+# unsplash_client_id = "Nzn8Fo0oteghIaTz-B0AAH3GQ-7BH2XNqWiJpE1AsB8"
+# unsplash_author = "chaojie"
+
 
 # --- giscus --- #
 # see https://giscus.app/ for more details
