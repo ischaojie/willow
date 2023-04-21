@@ -120,10 +120,17 @@ api = "https://momo.chaojie.fun/api/memo/all"
 
 ### Photography
 
-willow 支持摄影作品页面，将需要展示的照片链接放在 photos 字段即可。配置参考：
+willow 支持摄影作品页面，您可以自定义或者使用其他平台（目前仅 unsplash）。配置参考：
 
 ```toml
 [extra.willow.photography]
+
+# 类型：使用 unsplash 中的照片，置空展示 photos 中的照片。
+type = "unsplash"
+# client id: 申请 unsplash 开发者账号，获取 client id
+unsplash_client_id = "Nzn8Fo0oteghIaTz-B0AAH3GQ-7BH2XNqWiJpE1AsB8"
+# 要展示的作者
+unsplash_author = "chaojie"
 photos = [
     "https://file.chaojie.fun/photography/过春天.jpg",
     "https://file.chaojie.fun/photography/lan.jpg",
@@ -131,6 +138,8 @@ photos = [
 ```
 
 ### 完整配置参考
+
+> [可复制 config.toml，根据需要修改](config.toml)
 
 ```toml
 # --- willow config example --- #

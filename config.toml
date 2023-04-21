@@ -66,6 +66,15 @@ github = "ischaojie"
 # --- photography --- #
 
 [extra.willow.photography]
+
+# if not set, will use photos from config below
+type = "unsplash"
+
+# unsplash client id, you need to apply developer account on unsplash
+unsplash_client_id = "Nzn8Fo0oteghIaTz-B0AAH3GQ-7BH2XNqWiJpE1AsB8"
+# unsplash author
+unsplash_author = "chaojie"
+
 # Put the photos you want to show on the photography page here
 photos = [
     "https://file.chaojie.fun/photography/过春天.jpg",

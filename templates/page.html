@@ -16,6 +16,11 @@
 <p class="text-center" style="margin: 12px 0;">看完了，没有啦 😝</p>
 {% elif page.path == '/photography/' %}
 {{ photography::main() }}
+<p class="text-center" style="margin: 12px 0;">View more on <a
+        href="https://unsplash.com/@{{ config.extra.willow.photography.unsplash_author }}" target="_blank">unsplash</a>
+</p>
+{% elif page.path == '/projects/' %}
+{{ projects::main() }}
 {% else %}
 <div class="card card-lg">
     <div class="card-body markdown">
