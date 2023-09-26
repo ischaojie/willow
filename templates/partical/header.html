@@ -21,7 +21,15 @@
             </div>
         </div>
         <div class="col align-self-end">
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end space-x">
+                {% if config.extra.willow.social %}
+                {% for name, identi in config.extra.willow.social %}
+                <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}" target="_blank">
+                    {% set path = 'images/social/' ~ name ~ '.svg' %}
+                    <img src="{{ get_url(path=path) }}" alt={{ name }} width="18" height="18">
+                </a>
+                {% endfor %}
+                {% endif %}
                 <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}" target="_blank">
                     <img src="{{ get_url(path='images/social/rss.svg') }}" alt="RSS" width="18" height="18">
                 </a>

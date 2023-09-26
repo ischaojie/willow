@@ -11,43 +11,25 @@
                 {{ section.content | safe }}
             </div>
         </section>
-        <!-- social -->
-        {% if config.extra.willow.social %}
-        <section class="row" style="margin-top: 24px;">
-            <div class="d-flex flex-row align-items-center gap-2">
-                <div class="fs-2">Find me on</div>
-                <div class="d-flex flex-row gap-2">
-                    {% for name, identi in config.extra.willow.social %}
-                    {{ social::main(name=name, identi=identi) }}
-                    {% if not loop.last %}<div class="opacity-50">|</div>{% endif %}
-                    {% endfor %}
-                </div>.
-            </div>
-        </section>
-        {% endif %}
         <!-- articles -->
         <section class="row gap-2" style="margin-top: 48px;">
-            <h1><a href="{{ get_url(path='@/articles/_index.md') }}">Articles</a></h1>
+            <h2>Recent Posts</h2>
             {% set posts = get_section(path="articles/_index.md") %}
             {% for page in posts.pages %}
             {% if not page.draft %}
             {% if config.extra.willow.show_article_num %}
             {% set article_num = config.extra.willow.show_article_num %}
             {% else %}
-            {% set article_num = 10 %}
+            {% set article_num = 5 %}
             {% endif %}
             {% if loop.index <= article_num %}
-            <div class="d-flex">
-                <div class="col-2 font-monospace">
-                    {{ page.date | date(format="%Y-%m-%d") }}
-                </div>
-                <div class="col text-start">
-                    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-                </div>
+            <div class="d-flex space-x">
+                <span class="gray" style="color: gray;">{{ page.date | date(format="%Y %b %d" ) }}</span>
+                <a class="post-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
             </div>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
         </section>
     </div>
 </div>
