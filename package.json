@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"dev": "unocss \"templates/**/*.html\" -o \"static/css/uno.css\" --watch",
+		"build": "unocss \"templates/**/*.html\" -o \"static/css/uno.css\""
+	  },
+	"devDependencies": {
+		"@unocss/cli": "^0.57.1",
+		"unocss": "^0.57.1"
+	}
+}

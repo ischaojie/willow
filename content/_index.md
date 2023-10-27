@@ -2,12 +2,12 @@
 title = "Home"
 +++
 
-你好哇，Willow 是为静态站点生成工具 [zola](https://www.getzola.org/) 制作的一款主题。没有 [Tabler](https://github.com/tabler/tabler) 这么漂亮的组件，就没有 willow 的出现。感谢 Tabler 以及其他第三方库，感谢开源！
+Hello, Willow is a theme designed for the static site generator tool [zola](https://www.getzola.org/). Without beautiful components like [Tabler](https://github.com/tabler/tabler), Willow would not exist. Thanks to Tabler and other third-party libraries, thank you for open source!
 
-willow 的一些主要功能：
-- blog 通用的功能，文章列表、标签页、关于页面、RSS 等等。
-- 支持 [giscus](https://giscus.app/) 评论系统。
-- 支持摄影作品页面（待支持点赞。
-- 支持 [memos](https://github.com/usememos/memos) 动态（我称之为碎碎念。
+Some main features of Willow:
+- Common blog functions such as article lists, tag pages, about pages, RSS feeds, etc.
+- Supports the [giscus](https://giscus.app/) commenting system.
+- Supports photography portfolio pages (likes support coming soon).
+- Supports [memos](https://github.com/usememos/memos) feature.
 
-详细使用方式请参考 [README](https://github.com/ischaojie/willow/)，有任何问题欢迎提 [issue](https://github.com/ischaojie/willow/issues)。
+For detailed usage instructions, please refer to the [README](https://github.com/ischaojie/willow/). If you have any questions, feel free to raise an [issue](https://github.com/ischaojie/willow/issues).

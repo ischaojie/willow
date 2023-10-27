@@ -6,7 +6,7 @@
     <div class="card-body markdown">
         <!-- intro -->
         <section class="row">
-            <div class="markdown tracking-wide">
+            <div class="font-sans markdown tracking-wide text-gray-700">
                 {% set section = get_section(path="_index.md") %}
                 {{ section.content | safe }}
             </div>
@@ -23,8 +23,8 @@
             {% set article_num = 5 %}
             {% endif %}
             {% if loop.index <= article_num %}
-            <div class="d-flex space-x">
-                <span class="gray" style="color: gray;">{{ page.date | date(format="%Y %b %d" ) }}</span>
+            <div class="flex gap-4">
+                <div class="text-gray-500 text-justify justify-self-end">{{ page.date | date(format="%Y %b %d" ) }}</div>
                 <a class="post-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
             </div>
                 {% endif %}
