@@ -23,7 +23,7 @@
 {{ projects::main() }}
 {% else %}
 <div class="card card-lg">
-    <div class="card-body markdown">
+    <div class="card-body markdown text-justify">
         <div class="">
             {% set page_path = page.path | split(pat="/") %}
             {% if 'articles' in page_path %}

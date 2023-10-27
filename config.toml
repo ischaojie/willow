@@ -1,7 +1,7 @@
 base_url = "https://willow.chaojie.fun"
 title = "Willow"
 description = "A zola theme named willow"
-default_language = "zh-CN"
+default_language = "en"
 compile_sass = true
 build_search_index = false
 generate_feed = true
@@ -18,7 +18,6 @@ language_name = "English"
 home = "Home"
 articles = "Articles"
 tags = "Tags"
-photography = "Photography"
 about = "About"
 memos = "Status"
 date_format = "%Y-%m-%d"
@@ -30,7 +29,6 @@ language_name = "中文"
 home = "首页"
 articles = "文章"
 tags = "标签"
-photography = "摄影"
 about = "关于"
 memos = "碎碎念"
 date_format = "%Y-%m-%d"
@@ -49,7 +47,7 @@ show_article_num = 10
 
 # The order of the navigation bar, home is the first by default
 # current supported nav: articles, tags, about, photography, memos
-nav = ["articles", "memos", "photography", "tags", "about"]
+nav = ["articles", "memos", "tags", "about"]
 
 # Google analytics ID
 google_analytics = "G-XDREGKCZH0"
