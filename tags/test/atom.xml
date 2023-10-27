@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Willow - test</title>
+    <subtitle>A zola theme named willow</subtitle>
+    <link href="https://willow.chaojie.fun/tags/test/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://willow.chaojie.fun"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-01T00:00:00+00:00</updated>
+    <id>https://willow.chaojie.fun/tags/test/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Test English</title>
+        <published>2023-11-01T00:00:00+00:00</published>
+        <updated>2023-11-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://willow.chaojie.fun/articles/test-en/" type="text/html"/>
+        <id>https://willow.chaojie.fun/articles/test-en/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)&lt;&#x2F;p&gt;
+&lt;p&gt;Newsgroups: comp.os.minix&lt;&#x2F;p&gt;
+&lt;p&gt;Subject: What would you like to see most in minix?&lt;&#x2F;p&gt;
+&lt;p&gt;Summary: small poll for my new operating system&lt;&#x2F;p&gt;
+&lt;p&gt;Message-ID:&lt;&#x2F;p&gt;
+&lt;p&gt;Date: 25 Aug 91 20:57:08 GMT&lt;&#x2F;p&gt;
+&lt;p&gt;Organization: University of Helsinki&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Hello everybody out there using minix -&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m doing a (free) operating system (just a hobby, won&#x27;t be big and professional like gnu) for 386(486) AT clones. This has been brewing since april, and is starting to get ready. I&#x27;d like any feedback on things people like&#x2F;dislike in minix, as my OS resembles it somewhat (same physical layout of the file-system (due to practical reasons ) among other things). I&#x27;ve currently ported bash (1.08) and goc(1.40), and things seem to work. This implies that I&#x27;ll get something practical within a few months, and I&#x27;d like to know what features most people would want. Any suggestions are welcome, but I won&#x27;t promise I&#x27;ll implement them : -)&lt;&#x2F;p&gt;
+&lt;p&gt;Linus (torvaldsekruuna.helsinki.fi)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
